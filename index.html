@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You Just Met The Sun ☀️ — Dr. Nikkia Gumbs at SHRM 2026</title>
+
+  <!-- ─── SEO ─────────────────────────────────────────────── -->
+  <meta name="description" content="Dr. Nikkia Gumbs (The Sun), EdD — SHRM 2026 speaker on burnout, AI, human work, and human-centered systems design.">
+  <meta name="author" content="Dr. Nikkia Gumbs">
+  <meta name="robots" content="index, follow">
+
+  <!-- ─── Open Graph ───────────────────────────────────────── -->
+  <meta property="og:title" content="You Just Met The Sun ☀️">
+  <meta property="og:description" content="Dr. Nikkia Gumbs is speaking at SHRM 2026 on burnout, AI, human work, and why the future of work still needs actual humans.">
+  <meta property="og:type" content="website">
+  <!-- TODO: Uncomment and fill in your deployed URL -->
+  <!-- <meta property="og:url" content="YOUR_URL_HERE"> -->
+  <!-- TODO: Add a 1200×630 social share image -->
+  <!-- <meta property="og:image" content="YOUR_SHARE_IMAGE_URL_HERE"> -->
+  <!-- <meta property="og:image:alt" content="Dr. Nikkia Gumbs (The Sun) — SHRM 2026 Speaker"> -->
+  <meta property="og:site_name" content="The House of the Sun">
+
+  <!-- ─── Twitter Card ──────────────────────────────────────── -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="You Just Met The Sun ☀️ — SHRM 2026">
+  <meta name="twitter:description" content="Dr. Nikkia Gumbs on burnout, AI, and why the future of work still needs actual humans.">
+  <!-- TODO: <meta name="twitter:image" content="YOUR_SHARE_IMAGE_URL_HERE"> -->
+
+  <!-- ─── Fonts (free via Google Fonts) ────────────────────── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ══════════════════════════════════════════════════════
+       DESIGN TOKENS
+    ══════════════════════════════════════════════════════ */
+    :root {
+      --gold:         #F7C01E;
+      --gold-deep:    #D9A800;
+      --tomato:       #E85D3E;
+      --tomato-text:  #B83420;   /* darkened for small-text contrast */
+      --tomato-pale:  #FDEAE4;
+      --ocean:        #1B3A6B;
+      --ocean-mid:    #254E91;
+      --petal:        #F9D6C8;
+      --warm-white:   #FFFEF8;
+      --ink:          #242424;
+      --muted:        #727272;
+
+      --font-display: 'Fraunces', Georgia, serif;
+      --font-body:    'DM Sans', system-ui, -apple-system, sans-serif;
+
+      --radius:    12px;
+      --radius-lg: 20px;
+      --max-w:     680px;
+    }
+
+    /* ══════════════════════════════════════════════════════
+       RESET + BASE
+    ══════════════════════════════════════════════════════ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      background: var(--warm-white);
+      color: var(--ink);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; padding: 0; }
+
+    /* Accessibility: skip link */
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 1rem;
+      padding: 0.5rem 1rem;
+      background: var(--gold);
+      color: var(--ocean);
+      font-weight: 600;
+      border-radius: 0 0 var(--radius) var(--radius);
+      z-index: 200;
+      transition: top 0.2s;
+    }
+    .skip-link:focus { top: 0; }
+
+    /* Keyboard focus ring */
+    :focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 3px;
+    }
+
+    /* ══════════════════════════════════════════════════════
+       LAYOUT HELPERS
+    ══════════════════════════════════════════════════════ */
+    .wrap {
+      width: 100%;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+    .sec { padding: 3rem 0; }
+
+    .eyebrow {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.55rem;
+    }
+
+    /* ══════════════════════════════════════════════════════
+       NAVIGATION
+    ══════════════════════════════════════════════════════ */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 99;
+      background: var(--ocean);
+      padding: 0.85rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .nav-brand {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: -0.015em;
+      flex-shrink: 0;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.25rem;
+    }
+    .nav-links a {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.65);
+      transition: color 0.15s;
+      white-space: nowrap;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    /* Hide text links on very small screens — logo stays */
+    @media (max-width: 460px) { .nav-links { display: none; } }
+
+    /* ══════════════════════════════════════════════════════
+       BUTTONS
+    ══════════════════════════════════════════════════════ */
+    .btn {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 0.7rem 1.4rem;
+      border-radius: 100px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.12s ease, box-shadow 0.12s ease;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 22px rgba(0,0,0,0.16);
+    }
+    .btn:active { transform: translateY(0); box-shadow: none; }
+
+    .btn-gold   { background: var(--gold); color: var(--ocean); }
+    .btn-ghost  {
+      background: transparent;
+      color: rgba(255,255,255,0.85);
+      border: 1.5px solid rgba(255,255,255,0.3);
+    }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold); box-shadow: none; }
+    .btn-tomato { background: var(--tomato); color: #fff; }
+    .btn-ocean  { background: var(--ocean); color: #fff; }
+    .btn-ocean:hover { background: var(--ocean-mid); }
+
+    /* ══════════════════════════════════════════════════════
+       HERO
+       Signature: broadcast-rings SVG (sun + signal motifs merged)
+    ══════════════════════════════════════════════════════ */
+    #hero {
+      background: var(--ocean);
+      padding: 3rem 0 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* The broadcast-rings art: absolute, top-right corner */
+    .hero-rings {
+      position: absolute;
+      top: -70px;
+      right: -100px;
+      width: 360px;
+      height: 360px;
+      pointer-events: none;
+      opacity: 0.14;
+    }
+
+    .hero-wrap { position: relative; z-index: 1; }
+
+    /* ── Photo with pulsing halo ─────────────────────────── */
+    .photo-halo {
+      position: relative;
+      width: 94px;
+      height: 94px;
+      margin-bottom: 2rem;
+    }
+    /* Inner static ring */
+    .photo-halo::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 122px; height: 122px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(247,192,30,0.3);
+    }
+    /* Outer animated ring */
+    .photo-halo::after {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 154px; height: 154px;
+      border-radius: 50%;
+      border: 1px solid rgba(247,192,30,0.15);
+      animation: halo-pulse 3.8s ease-in-out infinite;
+    }
+    @keyframes halo-pulse {
+      0%, 100% { opacity: 0.55; transform: translate(-50%,-50%) scale(1); }
+      50%       { opacity: 1;   transform: translate(-50%,-50%) scale(1.05); }
+    }
+    .photo-circle {
+      width: 94px;
+      height: 94px;
+      border-radius: 50%;
+      background: var(--gold);
+      border: 3px solid var(--gold);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.67rem;
+      font-weight: 600;
+      color: var(--ocean);
+      text-align: center;
+      line-height: 1.4;
+      position: relative;
+      z-index: 1;
+    }
+    .photo-circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ── Hero text ──────────────────────────────────────── */
+    .hero-eyebrow {
+      font-size: 0.73rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.65rem;
+    }
+    .hero-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.1rem, 9vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.08;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    .hero-sub {
+      font-size: 1rem;
+      line-height: 1.55;
+      color: rgba(255,255,255,0.72);
+      max-width: 40ch;
+      margin-bottom: 0.75rem;
+    }
+    .hero-intro {
+      font-size: 0.88rem;
+      line-height: 1.68;
+      color: rgba(255,255,255,0.48);
+      max-width: 44ch;
+      font-style: italic;
+      margin-bottom: 2rem;
+    }
+    .cta-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      max-width: 270px;
+    }
+    @media (min-width: 540px) {
+      .cta-stack {
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: none;
+      }
+    }
+
+    /* ══════════════════════════════════════════════════════
+       WHY THE OUTFIT
+    ══════════════════════════════════════════════════════ */
+    #outfit {
+      background: var(--warm-white);
+      border-top: 4px solid var(--gold);
+    }
+    .outfit-h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.3rem, 5vw, 1.9rem);
+      font-weight: 700;
+      color: var(--ocean);
+      line-height: 1.2;
+      margin-bottom: 0.85rem;
+    }
+    .outfit-p {
+      font-size: 0.93rem;
+      line-height: 1.78;
+      color: #484848;
+      max-width: 48ch;
+    }
+
+    /* ══════════════════════════════════════════════════════
+       SESSIONS
+    ══════════════════════════════════════════════════════ */
+    #sessions {
+      background: var(--petal);
+    }
+    .sessions-h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.3rem, 5vw, 1.9rem);
+      font-weight: 700;
+      color: var(--ocean);
+      margin-bottom: 1.5rem;
+    }
+
+    .card {
+      position: relative;
+      background: #fff;
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+      box-shadow: 0 2px 16px rgba(27,58,107,0.07);
+    }
+    .card:last-of-type { margin-bottom: 0; }
+    .card-red  { border-top: 5px solid var(--tomato); }
+    .card-blue { border-top: 5px solid var(--ocean); }
+
+    .card-badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 0.22rem 0.65rem;
+      border-radius: 100px;
+      margin-bottom: 0.75rem;
+    }
+    .badge-red  { background: var(--tomato-pale); color: var(--tomato-text); }
+    .badge-blue { background: rgba(27,58,107,0.08); color: var(--ocean); }
+
+    .card-h3 {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--ocean);
+      line-height: 1.2;
+      margin-bottom: 0.2rem;
+    }
+    .card-sub {
+      font-size: 0.83rem;
+      color: var(--muted);
+      margin-bottom: 0.85rem;
+    }
+
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 0.9rem;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.2rem;
+      font-size: 0.76rem;
+      font-weight: 500;
+      padding: 0.28rem 0.7rem;
+      border-radius: 100px;
+      border: 1px solid rgba(27,58,107,0.14);
+      background: var(--warm-white);
+      color: var(--ocean);
+    }
+    .pill-tbc { opacity: 0.4; font-style: italic; }
+
+    .card-desc {
+      font-size: 0.87rem;
+      color: #565656;
+      line-height: 1.65;
+      margin-bottom: 0.85rem;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .chip {
+      font-size: 0.73rem;
+      font-weight: 500;
+      color: var(--ocean);
+      background: rgba(27,58,107,0.07);
+      padding: 0.22rem 0.6rem;
+      border-radius: 6px;
+    }
+
+    /* ══════════════════════════════════════════════════════
+       ABOUT
+    ══════════════════════════════════════════════════════ */
+    #about {
+      background: var(--ocean);
+    }
+    .about-eyebrow { color: rgba(255,255,255,0.32); }
+    .about-h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.35rem, 5vw, 1.9rem);
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .about-p {
+      font-size: 0.93rem;
+      line-height: 1.78;
+      color: rgba(255,255,255,0.78);
+      margin-bottom: 0.75rem;
+    }
+    .about-creds {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: rgba(255,255,255,0.3);
+      margin-top: 0.25rem;
+    }
+
+    /* ══════════════════════════════════════════════════════
+       BOOK
+    ══════════════════════════════════════════════════════ */
+    #book {
+      background: var(--warm-white);
+    }
+    .book-card {
+      border: 2px solid var(--gold);
+      border-radius: var(--radius-lg);
+      padding: 2rem 1.5rem;
+    }
+    .book-h2 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--ocean);
+      line-height: 1.3;
+      margin-bottom: 0.65rem;
+      margin-top: 0.4rem;
+    }
+    .book-em { color: var(--tomato); font-style: italic; }
+    .book-p {
+      font-size: 0.9rem;
+      line-height: 1.72;
+      color: #555;
+      margin-bottom: 1.25rem;
+      max-width: 44ch;
+    }
+
+    /* ══════════════════════════════════════════════════════
+       HOUSE OF THE SUN
+    ══════════════════════════════════════════════════════ */
+    #house {
+      background: var(--gold);
+    }
+    .house-eyebrow { color: rgba(27,58,107,0.45); }
+    .house-h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.35rem, 5vw, 1.9rem);
+      font-weight: 700;
+      color: var(--ocean);
+      margin-bottom: 0.75rem;
+    }
+    .house-p {
+      font-size: 0.93rem;
+      line-height: 1.72;
+      color: var(--ocean);
+      opacity: 0.78;
+      max-width: 42ch;
+      margin-bottom: 1.5rem;
+    }
+
+    /* ══════════════════════════════════════════════════════
+       CONNECT
+    ══════════════════════════════════════════════════════ */
+    #connect {
+      background: var(--warm-white);
+      border-top: 1px solid rgba(0,0,0,0.07);
+    }
+    .connect-h2 {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--ocean);
+      margin-bottom: 1.25rem;
+    }
+    .connect-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.65rem;
+    }
+    @media (min-width: 460px) {
+      .connect-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .connect-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.8rem 1rem;
+      border: 1px solid rgba(0,0,0,0.1);
+      border-radius: var(--radius);
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--ink);
+      transition: border-color 0.15s, background 0.15s;
+    }
+    .connect-item:hover { border-color: var(--gold); background: #fffdf0; }
+    .c-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--petal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--ocean);
+      flex-shrink: 0;
+    }
+
+    /* ══════════════════════════════════════════════════════
+       FOOTER
+    ══════════════════════════════════════════════════════ */
+    footer {
+      background: var(--ocean);
+      padding: 2.5rem 1.25rem;
+      text-align: center;
+    }
+    .footer-name {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 0.35rem;
+    }
+    .footer-meta {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 0.4rem;
+    }
+    .footer-tag {
+      font-size: 0.68rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.22);
+    }
+
+    /* ══════════════════════════════════════════════════════
+       ACCESSIBILITY: REDUCED MOTION
+    ══════════════════════════════════════════════════════ */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .photo-halo::after { animation: none; }
+      .btn { transition: none; }
+    }
+  </style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<!-- ═══════════════════════════════════════════════════════════
+     NAVIGATION
+════════════════════════════════════════════════════════════ -->
+<nav aria-label="Site navigation">
+  <span class="nav-brand">The Sun ☀️</span>
+  <ul class="nav-links">
+    <li><a href="#sessions">Sessions</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#book">Book</a></li>
+    <li><a href="#connect">Connect</a></li>
+  </ul>
+</nav>
+
+<main id="main">
+
+<!-- ═══════════════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════════════════ -->
+<section id="hero" aria-label="Introduction">
+
+  <!--
+    SIGNATURE ELEMENT: "Broadcast Rings" SVG
+    Reads as sun rays AND radio signal rings — ties The Sun identity
+    to the "broadcast vs. signal" concept from the AI session.
+    Positioned top-right as ambient background art.
+  -->
+  <svg class="hero-rings" viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg"
+       aria-hidden="true" focusable="false">
+    <circle cx="180" cy="180" r="34"  fill="#F7C01E" opacity="0.9"/>
+    <circle cx="180" cy="180" r="65"  fill="none" stroke="#F7C01E" stroke-width="2"   stroke-dasharray="8 5"  opacity="0.7"/>
+    <circle cx="180" cy="180" r="100" fill="none" stroke="#F7C01E" stroke-width="1.5" stroke-dasharray="5 7"  opacity="0.45"/>
+    <circle cx="180" cy="180" r="138" fill="none" stroke="#F7C01E" stroke-width="1"   stroke-dasharray="3 10" opacity="0.25"/>
+    <circle cx="180" cy="180" r="176" fill="none" stroke="#F7C01E" stroke-width="1"   stroke-dasharray="1 12" opacity="0.12"/>
+  </svg>
+
+  <div class="wrap hero-wrap">
+
+    <!--
+      SPEAKER PHOTO
+      ─────────────────────────────────────────────────────────
+      TODO: Add your photo (outfit or portrait, square crop recommended).
+
+      Replace the placeholder text inside .photo-circle with:
+        <img src="YOUR-PHOTO-URL.jpg"
+             alt="Dr. Nikkia Gumbs (The Sun), SHRM 2026 speaker">
+
+      The gold circle + pulsing halo rings are already styled —
+      your image will fill the circle automatically.
+      ─────────────────────────────────────────────────────────
+    -->
+    <div class="photo-halo" role="img" aria-label="Speaker photo">
+      <div class="photo-circle">
+        <!--
+          TODO: Replace with your photo tag, e.g.:
+          <img src="photo.jpg" alt="Dr. Nikkia Gumbs (The Sun)">
+        -->
+        Add<br>photo
+      </div>
+    </div>
+
+    <p class="hero-eyebrow">SHRM 2026 Speaker</p>
+    <h1 class="hero-h1">Congratulations.<br>You just met<br>The&nbsp;Sun.</h1>
+    <p class="hero-sub">Dr. Nikkia Gumbs is speaking at SHRM 2026 on burnout, AI, human work, and why the future of work still needs actual humans.</p>
+    <p class="hero-intro">I help people and organizations understand modern work through grief literacy, nervous system awareness, and reality-based frameworks for how humans actually function.</p>
+
+    <div class="cta-stack">
+      <a href="#sessions" class="btn btn-gold">See My Sessions</a>
+      <!--
+        TODO: Replace # with your website URL.
+        Example: href="https://thehouseofthesun.com"
+      -->
+      <a href="#" class="btn btn-ghost" target="_blank" rel="noopener">The House of the Sun</a>
+      <a href="#book" class="btn btn-ghost">My Book</a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     WHY THE OUTFIT
+════════════════════════════════════════════════════════════ -->
+<section class="sec" id="outfit" aria-label="Why the outfit">
+  <div class="wrap">
+    <p class="eyebrow">Why the outfit?</p>
+    <h2 class="outfit-h2">Yes, I know I'm dressed like&nbsp;this.</h2>
+    <p class="outfit-p">The outfits are intentional. The tomatoes, colors, sparkle, softness, and strange little details are not separate from the work. They are pattern interruption. They help people remember ideas that usually get flattened into corporate language. If the outfit made you curious, good. The teaching has already started.</p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SESSIONS
+════════════════════════════════════════════════════════════ -->
+<section class="sec" id="sessions" aria-label="SHRM 2026 Sessions">
+  <div class="wrap">
+    <p class="eyebrow">SHRM 2026</p>
+    <h2 class="sessions-h2">Where to find me</h2>
+
+    <!-- ────────────────────────────────────────────────────
+         SESSION 1: BURNOUT / REPAIR-FIRST
+    ──────────────────────────────────────────────────────── -->
+    <div class="card card-red">
+      <span class="card-badge badge-red">🍅 Burnout &amp; Systems Design</span>
+      <h3 class="card-h3">Stop Demanding Fruit from Dead Soil</h3>
+      <p class="card-sub">A Repair-First Approach to Burnout</p>
+
+      <div class="meta-row">
+        <!--
+          TODO: Confirm date/time with SHRM.
+          Currently showing as tentative (Thursday 12:30 PM).
+          Remove the pill-tbc class once confirmed.
+        -->
+        <span class="pill">📅 Thursday · 12:30 PM</span>
+
+        <!--
+          TODO: Replace with your confirmed room and location.
+          Example: <span class="pill">📍 Room 204B · Hall C</span>
+          Remove the pill-tbc class once you have this.
+        -->
+        <span class="pill pill-tbc">📍 Room TBC</span>
+
+        <!--
+          TODO: Add streaming info if this session is available virtually.
+          Uncomment when ready:
+          <span class="pill">🎥 Livestreamed</span>
+        -->
+      </div>
+
+      <p class="card-desc">Burnout is not laziness. It is prolonged depletion without meaningful repair. This session reframes burnout as a systems problem and shows you how to design your way out of it.</p>
+
+      <div class="chips">
+        <span class="chip">Burnout as depletion without repair</span>
+        <span class="chip">The tomato metaphor</span>
+        <span class="chip">Repair → regulation → resilience</span>
+        <span class="chip">30-day repair plan for teams</span>
+      </div>
+
+      <!--
+        TODO: Add your SHRM session catalog link when available.
+        Uncomment the block below and insert the URL:
+
+        <div style="margin-top:1rem; padding-top:0.75rem; border-top:1px solid rgba(0,0,0,0.07); font-size:0.8rem;">
+          <a href="INSERT_SHRM_SESSION_URL" target="_blank" rel="noopener"
+             style="color:var(--ocean); font-weight:600; text-decoration:underline; text-underline-offset:2px;">
+            Add to my SHRM schedule →
+          </a>
+        </div>
+      -->
+    </div>
+
+    <!-- ────────────────────────────────────────────────────
+         SESSION 2: AI + HUMAN WORK
+    ──────────────────────────────────────────────────────── -->
+    <div class="card card-blue">
+      <span class="card-badge badge-blue">🤖 AI &amp; Human Work</span>
+      <h3 class="card-h3">The Future of Work:<br>What Humans Do That AI&nbsp;Can't</h3>
+      <p class="card-sub">Human judgment, meaning-making, and the work AI should not own</p>
+
+      <div class="meta-row">
+        <!--
+          TODO: Confirm date/time with SHRM.
+          Currently showing as tentative (Friday 7:30 AM).
+        -->
+        <span class="pill">📅 Friday · 7:30 AM</span>
+
+        <!--
+          TODO: Replace with confirmed room/location.
+          Example: <span class="pill">📍 Hall D · Room 310</span>
+        -->
+        <span class="pill pill-tbc">📍 Room TBC</span>
+
+        <!--
+          TODO: Add streaming info if available.
+          <span class="pill">🎥 Livestreamed</span>
+        -->
+      </div>
+
+      <p class="card-desc">AI can draft, summarize, and accelerate task work. But competence in language is not competence in reality. Learn to deploy AI intentionally — without erasing the work humans are actually needed for.</p>
+
+      <div class="chips">
+        <span class="chip">The Car Wash Problem</span>
+        <span class="chip">Broadcast vs. signal</span>
+        <span class="chip">Task · Judgment · Human Work</span>
+        <span class="chip">Human–AI Workforce Architecture™</span>
+        <span class="chip">Human Work Audit™</span>
+      </div>
+
+      <!--
+        TODO: Add SHRM session catalog link when available.
+        Uncomment the block below and insert the URL:
+
+        <div style="margin-top:1rem; padding-top:0.75rem; border-top:1px solid rgba(0,0,0,0.07); font-size:0.8rem;">
+          <a href="INSERT_SHRM_SESSION_URL" target="_blank" rel="noopener"
+             style="color:var(--ocean); font-weight:600; text-decoration:underline; text-underline-offset:2px;">
+            Add to my SHRM schedule →
+          </a>
+        </div>
+      -->
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     ABOUT
+════════════════════════════════════════════════════════════ -->
+<section class="sec" id="about" aria-label="About Dr. Nikkia Gumbs">
+  <div class="wrap">
+    <p class="eyebrow about-eyebrow">The speaker</p>
+    <h2 class="about-h2">About The Sun ☀️</h2>
+    <p class="about-p">Dr. Nikkia Gumbs, known publicly as The Sun, is a human systems thinker, speaker, writer, and workplace educator. Her work explores grief, culture, nervous system literacy, burnout, loneliness, AI, and the design of human-centered systems.</p>
+    <p class="about-p">She brings research-grounded ideas into rooms that need more honesty, more humanity, and better frameworks for how people actually live and work.</p>
+    <p class="about-creds">Dr. Nikkia Gumbs (The Sun) · EdD, M.H.R.</p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     BOOK
+════════════════════════════════════════════════════════════ -->
+<section class="sec" id="book" aria-label="Book at the SHRM Bookstore">
+  <div class="wrap">
+    <div class="book-card">
+      <p class="eyebrow">At the SHRM Bookstore</p>
+      <h2 class="book-h2">
+        Find my book:<br>
+        <em class="book-em">The Invisible Grief of Adulthood</em>
+      </h2>
+      <p class="book-p">It explores the quiet grief many adults carry while still trying to work, lead, care, survive, and stay human. If this resonates — even a little — it was written for you.</p>
+      <!--
+        TODO: Update href with the SHRM bookstore link or your book's purchase page.
+        Example: href="https://thehouseofthesun.com/book"
+      -->
+      <a href="#" class="btn btn-tomato">Find It at the Bookstore</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     HOUSE OF THE SUN
+════════════════════════════════════════════════════════════ -->
+<section class="sec" id="house" aria-label="The House of the Sun">
+  <div class="wrap">
+    <p class="eyebrow house-eyebrow">Where the deeper work lives</p>
+    <h2 class="house-h2">Enter The House of the Sun</h2>
+    <p class="house-p">The House of the Sun explores modern human life through grief, culture, nervous system literacy, work, loneliness, and human systems design.</p>
+    <!--
+      TODO: Replace # with your website URL.
+      Example: href="https://thehouseofthesun.com"
+    -->
+    <a href="#" class="btn btn-ocean" target="_blank" rel="noopener">
+      Visit The House of the Sun
+    </a>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     CONNECT
+════════════════════════════════════════════════════════════ -->
+<section class="sec" id="connect" aria-label="Connect">
+  <div class="wrap">
+    <h2 class="connect-h2">Find me again</h2>
+    <div class="connect-grid">
+
+      <!--
+        TODO: Replace # with your LinkedIn profile URL.
+        Example: href="https://linkedin.com/in/yourprofile"
+      -->
+      <a href="#" class="connect-item" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <span class="c-icon" aria-hidden="true">in</span>
+        LinkedIn
+      </a>
+
+      <!--
+        TODO: Replace # with your website URL.
+        Example: href="https://thehouseofthesun.com"
+      -->
+      <a href="#" class="connect-item" target="_blank" rel="noopener" aria-label="Website">
+        <span class="c-icon" aria-hidden="true">🌐</span>
+        Website
+      </a>
+
+      <!--
+        TODO: Replace # with your email or contact form.
+        For email: href="mailto:you@yourdomain.com"
+        For contact form: href="https://yoursite.com/contact"
+      -->
+      <a href="#" class="connect-item" aria-label="Contact">
+        <span class="c-icon" aria-hidden="true">✉️</span>
+        Contact
+      </a>
+
+      <!--
+        TODO: Replace # with your newsletter signup link.
+        If you don't have one yet, delete this entire <a> block.
+        Example: href="https://buttondown.email/yourname"
+      -->
+      <a href="#" class="connect-item" target="_blank" rel="noopener" aria-label="Newsletter">
+        <span class="c-icon" aria-hidden="true">☀️</span>
+        Newsletter
+      </a>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════════ -->
+<footer>
+  <p class="footer-name">Dr. Nikkia Gumbs (The Sun)</p>
+  <p class="footer-meta">EdD, M.H.R. · SHRM 2026</p>
+  <p class="footer-tag">Warmth · Rigor · Repair · Human Systems</p>
+</footer>
+
+</body>
+</html>
